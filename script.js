@@ -14,11 +14,22 @@
 
   const mainImages = document.getElementById('main');
   mainImages.src = images[currentIndex];
-  images.forEach(image => {
+  images.forEach((image, index) => {
     const img = document.createElement('img');
     img.src = image;
 
     const li = document.createElement('li');
+    if (index === currentIndex) {
+      li.classList.add('current');
+    }
+    li.addEventListener('click', () => {
+      mainImages.src = image;
+      const thumbnails = document.querySelectorAll('.thumbnails > li');
+      thumbnails[currentIndex].classList.remove('current');
+      currentIndex = index;
+      thumbnails[currentIndex].classList.add('current');
+    });
+
     li.appendChild(img);
     document.querySelector('.thumbnails').appendChild(li);
   });
