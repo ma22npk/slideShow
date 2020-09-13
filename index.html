@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Style CSS -->
-<link href="style.css" rel="stylesheet">
-  <title>スライドショー</title>
+  <!-- Style CSS -->
+  <link href="style.css" rel="stylesheet">
+  <title>Slideshow</title>
 </head>
+
 <body>
-  
-<script src="script.js"></script>
+  <main>
+    <img src="/img/1.png" id="main">
+    <nav>
+      <ul>
+        <li id="play">PLAY</li>
+        <!-- < と >　の記号がHTML#転職とみなされないように文字実態参照 -->
+        <li id="prev">&lt;</li>
+        <li id="next">&gt;</li>
+      </ul>
+    </nav>
+    <ul class="thumbnails">
+      <li><img src="img/1.png"></li>
+      <li><img src="img/2.png"></li>
+      <li><img src="img/3.png"></li>
+      <li><img src="img/4.png"></li>
+      <li><img src="img/5.png"></li>
+      <li><img src="img/6.png"></li>
+      <li><img src="img/7.png"></li>
+    </ul>
+
+  </main>
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>
