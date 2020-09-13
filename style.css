@@ -1,1 +1,74 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+main {
+  width: 300px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 8px;
+}
+
+nav {
+  margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav li {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+nav li:hover {
+  background: #f8f8f8;
+}
+
+#play {
+  width: 140px;
+}
+
+#prev,
+#next {
+  width: 60px;
+}
+
+.thumbnails img {
+  width: 56px;
+}
+
+img {
+  vertical-align: bottom;
+}
+/*# sourceMappingURL=style.css.map */
