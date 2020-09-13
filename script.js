@@ -52,17 +52,27 @@
     document.querySelectorAll('.thumbnails > li')[target].click();
   });
 
-function playSlideshow() {
-setTimeout(() => {
-next.click();
-  playSlideshow();
-}, 1000);
+  let timeoutId;
+
+  function playSlideshow() {
+    timeoutId = setTimeout(() => {
+      next.click();
+      playSlideshow();
+    }, 1000);
+  }
+
+  let isPlaying = false;
+
+  const play = document.getElementById('play');
+  play.addEventListener('click', () => {
+    if (isPlaying === false) {
+      playSlideshow();
+      play.textContent = 'Pause'
+    } else {
+      clearTimeout(timeoutId);
+    play.textContent = 'Play'
+    }
+    isPlaying = !isPlaying;
+  });
+
 }
-
-
-const play = document.getElementById('play');
-play.addEventListener('click', ()=>{
-playSlideshow();
-});
-
-}gi
